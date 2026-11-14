@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dkrgayn3jn5pn"]
+
+[ext_resource type="Script" uid="uid://ch7mps31vkbc5" path="res://player.gd" id="1_a0dvc"]
+[ext_resource type="Texture2D" uid="uid://dugnvx4ob3o0f" path="res://images (1).jpg" id="2_wk17q"]
+[ext_resource type="Texture2D" uid="uid://c8jlkn5tyef44" path="res://basketball-png-1.png" id="3_wk17q"]
+[ext_resource type="PackedScene" uid="uid://bkch1dhqisml5" path="res://basketball.tscn" id="4_1vgu0"]
+[ext_resource type="PackedScene" uid="uid://c2gyw06khevib" path="res://rigid_body_2d basketball.tscn" id="5_wls6j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p04sw"]
+radius = 275.10233
+
+[node name="Node2D" type="Node2D" unique_id=1847670378]
+position = Vector2(0, 4)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=74438383]
+position = Vector2(48, 97)
+script = ExtResource("1_a0dvc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=342156889]
+position = Vector2(-1.000001, 0)
+scale = Vector2(0.80882347, 0.9294119)
+texture = ExtResource("2_wk17q")
+
+[node name="pickup" type="Area2D" parent="Player" unique_id=2111393189]
+position = Vector2(1, 9)
+scale = Vector2(0.04, 0.04)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/pickup" unique_id=2018428360]
+position = Vector2(-150, -124.99999)
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_p04sw")
+
+[node name="holding" type="Sprite2D" parent="Player" unique_id=184925496]
+visible = false
+position = Vector2(-37, -51)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_wk17q")
+
+[node name="holding1" type="Sprite2D" parent="Player" unique_id=2034577383]
+visible = false
+position = Vector2(39, -51)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_wk17q")
+
+[node name="Basketball" parent="." unique_id=1184762357 instance=ExtResource("4_1vgu0")]
+position = Vector2(329, 171)
+
+[node name="Basketball2" parent="." unique_id=76232276 instance=ExtResource("4_1vgu0")]
+position = Vector2(473, 275)
+
+[node name="RigidBody2D" parent="." unique_id=1311949143 instance=ExtResource("5_wls6j")]
+position = Vector2(227, 165)
+rotation = 1.8829374
+
+[connection signal="area_entered" from="Player/pickup" to="Player" method="_on_pickup_area_entered"]

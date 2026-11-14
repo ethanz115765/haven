@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2gyw06khevib"]
+
+[ext_resource type="PackedScene" uid="uid://bkch1dhqisml5" path="res://basketball.tscn" id="1_wn7t6"]
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1311949143]
+
+[node name="Basketball" parent="." unique_id=1184762357 instance=ExtResource("1_wn7t6")]
+position = Vector2(0, 6)

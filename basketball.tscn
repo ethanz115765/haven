@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkch1dhqisml5"]
+
+[ext_resource type="Texture2D" uid="uid://c8jlkn5tyef44" path="res://basketball-png-1.png" id="1_512qa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehpid"]
+radius = 70.71068
+
+[node name="Basketball" type="Area2D" unique_id=1184762357 groups=["Basketball"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=971001491 groups=["Basketball"]]
+position = Vector2(-5, 8)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_ehpid")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1115958716]
+position = Vector2(1, 7)
+scale = Vector2(0.048046872, 0.039453126)
+texture = ExtResource("1_512qa")
