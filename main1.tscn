@@ -22,6 +22,12 @@ distance = -886.94073
 normal = Vector2(0.0035335468, 0.99999374)
 distance = -621.9679
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmw0q"]
+size = Vector2(8, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjlit"]
+size = Vector2(446, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iidfh"]
 size = Vector2(89, 20)
 
@@ -75,6 +81,14 @@ polygon = PackedVector2Array(747, -85, 766, -251, 846, -257, 898, -279, 887, -29
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundries" unique_id=1585823788]
 polygon = PackedVector2Array(-750, -84, -884, -33, -951, -271, -835, -258, -750, -256)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Boundries" unique_id=1206504570]
+position = Vector2(-662, -93)
+shape = SubResource("RectangleShape2D_qmw0q")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Boundries" unique_id=1530435476]
+position = Vector2(332, -119)
+shape = SubResource("RectangleShape2D_vjlit")
 
 [node name="Right_Goal" type="Area2D" parent="." unique_id=1128929606]
 position = Vector2(-706, -88)
