@@ -5,4 +5,4 @@
 [node name="RigidBody2D" type="RigidBody2D" unique_id=1311949143]
 
 [node name="Basketball" parent="." unique_id=1184762357 instance=ExtResource("1_wn7t6")]
-position = Vector2(0, 6)
+position = Vector2(103, 28)

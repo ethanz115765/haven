@@ -1,210 +1,99 @@
 [gd_scene format=3 uid="uid://dkrgayn3jn5pn"]
 
-[ext_resource type="Script" uid="uid://ch7mps31vkbc5" path="res://player.gd" id="1_a0dvc"]
-[ext_resource type="Texture2D" uid="uid://dugnvx4ob3o0f" path="res://images (1).jpg" id="2_wk17q"]
-[ext_resource type="Texture2D" uid="uid://c8jlkn5tyef44" path="res://basketball-png-1.png" id="3_wk17q"]
-[ext_resource type="PackedScene" uid="uid://bkch1dhqisml5" path="res://basketball.tscn" id="4_1vgu0"]
-[ext_resource type="PackedScene" uid="uid://c2gyw06khevib" path="res://rigid_body_2d basketball.tscn" id="5_wls6j"]
-[ext_resource type="Texture2D" uid="uid://qtsdtpav7tl3" path="res://main/assets/images/Tilemap/Terrain (16x16).png" id="6_wcpbv"]
+[ext_resource type="PackedScene" uid="uid://cuvihrpnnj0iq" path="res://Basketball.tscn" id="1_wcpbv"]
+[ext_resource type="Script" uid="uid://mkbfxpsn63nx" path="res://game_manager.gd" id="1_wls6j"]
+[ext_resource type="Script" uid="uid://krfiwu6f5cgo" path="res://right_hoop.gd" id="3_wcpbv"]
+[ext_resource type="Script" uid="uid://b2ibt5mjesbmx" path="res://left_hoop.gd" id="4_7chvb"]
+[ext_resource type="Texture2D" uid="uid://bpql72xk04upj" path="res://images.jpeg" id="5_wls6j"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_p04sw"]
-radius = 275.10233
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wls6j"]
+normal = Vector2(0.007104616, -0.9999747)
+distance = -432.9962
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7chvb"]
-texture = ExtResource("6_wcpbv")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-17:0/0 = 0
-18:0/0 = 0
-19:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-17:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-17:2/0 = 0
-18:2/0 = 0
-19:2/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-17:4/0 = 0
-18:4/0 = 0
-19:4/0 = 0
-20:4/0 = 0
-21:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-21:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-17:6/0 = 0
-18:6/0 = 0
-19:6/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-17:8/0 = 0
-18:8/0 = 0
-19:8/0 = 0
-20:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
-20:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_51emq"]
+normal = Vector2(0.99999607, 0.002793285)
+distance = -882.8988
 
-[sub_resource type="TileSet" id="TileSet_p04sw"]
-sources/0 = SubResource("TileSetAtlasSource_7chvb")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qmw0q"]
+normal = Vector2(-0.9999981, 0.0019801941)
+distance = -886.94073
 
-[node name="Node2D" type="Node2D" unique_id=1847670378]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vjlit"]
+normal = Vector2(0.0035335468, 0.99999374)
+distance = -621.9679
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iidfh"]
+size = Vector2(89, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51emq"]
+size = Vector2(84, 20)
+
+[node name="Main" type="Node2D" unique_id=667620851]
 position = Vector2(0, 4)
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=74438383]
-position = Vector2(48, 97)
-script = ExtResource("1_a0dvc")
+[node name="GameManager" type="Node" parent="." unique_id=250231368]
+unique_name_in_owner = true
+script = ExtResource("1_wls6j")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=342156889]
-position = Vector2(-1.000001, 0)
-scale = Vector2(0.80882347, 0.9294119)
-texture = ExtResource("2_wk17q")
+[node name="score" type="Label" parent="GameManager" unique_id=1278258403]
+custom_minimum_size = Vector2(1, 1)
+offset_left = -1066.0
+offset_top = -400.0
+offset_right = -907.0
+offset_bottom = -319.0
+theme_type_variation = &"HeaderLarge"
+text = "Left:
+Right:"
+autowrap_mode = 2
 
-[node name="pickup" type="Area2D" parent="Player" unique_id=2111393189]
-position = Vector2(1, 9)
-scale = Vector2(0.04, 0.04)
+[node name="Background" type="Sprite2D" parent="." unique_id=594887840]
+show_behind_parent = true
+light_mask = 512
+visibility_layer = 512
+scale = Vector2(3, 3)
+texture = ExtResource("5_wls6j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/pickup" unique_id=2018428360]
-position = Vector2(-24.999992, 25.000023)
-scale = Vector2(10, 10)
-shape = SubResource("CircleShape2D_p04sw")
+[node name="Camera2D" type="Camera2D" parent="Background" unique_id=1472076046]
+zoom = Vector2(0.54, 0.54)
 
-[node name="holding" type="Sprite2D" parent="Player" unique_id=184925496]
-visible = false
-position = Vector2(-37, -51)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("3_wk17q")
+[node name="Boundries" type="StaticBody2D" parent="." unique_id=245690097]
 
-[node name="holding1" type="Sprite2D" parent="Player" unique_id=2034577383]
-visible = false
-position = Vector2(39, -51)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("3_wk17q")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries" unique_id=479306543]
+shape = SubResource("WorldBoundaryShape2D_wls6j")
 
-[node name="Basketball" parent="." unique_id=1184762357 instance=ExtResource("4_1vgu0")]
-position = Vector2(334, 110)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundries" unique_id=862584120]
+shape = SubResource("WorldBoundaryShape2D_51emq")
 
-[node name="Basketball2" parent="." unique_id=76232276 instance=ExtResource("4_1vgu0")]
-position = Vector2(469, 97)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Boundries" unique_id=313151086]
+shape = SubResource("WorldBoundaryShape2D_qmw0q")
 
-[node name="RigidBody2D" parent="." unique_id=1311949143 instance=ExtResource("5_wls6j")]
-position = Vector2(231, 159)
-rotation = 1.8829374
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Boundries" unique_id=1503903123]
+shape = SubResource("WorldBoundaryShape2D_vjlit")
 
-[node name="TileMap" type="TileMap" parent="." unique_id=27240858]
-tile_set = SubResource("TileSet_p04sw")
-format = 2
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundries" unique_id=586644902]
+polygon = PackedVector2Array(747, -85, 766, -251, 846, -257, 898, -279, 887, -29)
 
-[connection signal="area_entered" from="Player/pickup" to="Player" method="_on_pickup_area_entered"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundries" unique_id=1585823788]
+polygon = PackedVector2Array(-750, -84, -884, -33, -951, -271, -835, -258, -750, -256)
+
+[node name="Right_Goal" type="Area2D" parent="." unique_id=1128929606]
+position = Vector2(-706, -88)
+
+[node name="Right_Hoop" type="CollisionShape2D" parent="Right_Goal" unique_id=489222721]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_iidfh")
+script = ExtResource("3_wcpbv")
+
+[node name="Left_Goal" type="Area2D" parent="." unique_id=1625404055]
+position = Vector2(706, -90)
+
+[node name="Left_Hoop" type="CollisionShape2D" parent="Left_Goal" unique_id=169105320]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_51emq")
+script = ExtResource("4_7chvb")
+
+[node name="BasketBall" parent="." unique_id=636201339 instance=ExtResource("1_wcpbv")]
+position = Vector2(1, -1)
+
+[connection signal="body_entered" from="Right_Goal" to="GameManager" method="_on_right_goal_body_entered"]
+[connection signal="body_entered" from="Left_Goal" to="GameManager" method="_on_left_goal_body_entered"]
