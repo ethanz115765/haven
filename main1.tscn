@@ -26,7 +26,7 @@ distance = -621.9679
 size = Vector2(8, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vjlit"]
-size = Vector2(446, 20)
+size = Vector2(12, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iidfh"]
 size = Vector2(89, 20)
@@ -87,7 +87,7 @@ position = Vector2(-662, -93)
 shape = SubResource("RectangleShape2D_qmw0q")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Boundries" unique_id=1530435476]
-position = Vector2(332, -119)
+position = Vector2(661, -86)
 shape = SubResource("RectangleShape2D_vjlit")
 
 [node name="Right_Goal" type="Area2D" parent="." unique_id=1128929606]

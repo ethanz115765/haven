@@ -9,16 +9,11 @@ func _physics_process(delta: float):
 	var collision = move_and_collide(direction * speed * delta)
 	get_global_mouse_position()
 
-
-func _process(delta: float) -> void:
-	if is_grabbed:
-		var mouse_pos = get_global_mouse_position()
-		global_position = lerp(global_position, mouse_pos, 0.1)
-		return
-
 func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and is_grabbed ==true:
+		linear_velocity += event.relative * 4
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			is_grabbed = true
 		else:
-			is_grabbed = false 
+			is_grabbed = false  
